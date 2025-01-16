@@ -8,36 +8,6 @@ namespace lab2
 {
     internal class Program
     {
-        public class rab
-        {
-            public string Fio { get; set; }
-            public decimal oklad { get; set; }
-            public rab (string fio, decimal salary)
-            {
-                Fio = fio;
-                oklad = salary;
-            }
-            public virtual void Show()
-            {
-                Console.WriteLine($"Работник: ФИО = {Fio}, зарплата =  {oklad}руб.");
-            }
-            public virtual decimal getsalary()
-            {
-                return oklad;
-            }
-        }
-        public class engi : rab
-        {
-            public string Specialty { get; set; }
-            public engi(string fio, decimal salary, string specialty) : base(fio, salary)
-            {
-                Specialty = specialty;
-            }
-            public override void Show()
-            {
-                Console.WriteLine($"Инженер: ФИО = {Fio}, зарплата = {getsalary()}руб.");
-            }
-        }
         public class prodac : rab
         {
             public decimal Obemprod { get; set; }
